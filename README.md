@@ -6,4 +6,4 @@ Medicure is a AI powered Health assistant. It predict to your diseas according t
 You can also appointment to doctor through our website and contact also.
 
 
-In this web application we have to use ML and python for backend and HTML and CSS for frontend.
+
