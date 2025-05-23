@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediSCAN - Machine Learning-based Disease Prediction</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='image.png') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MediSCAN</div>
+        <nav class="nav">
+            <a href="Home.html">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#Detection">Disease Detection</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MediScan- Machine Learning-based solution for disease prediction</h1>
+            <p>LET'S MAKE YOUR DIAGNOSIS SIMPLER</p>
+            <button id="Detection" class="cta-button" onclick="window.location.href='/disease-prediction'">Know your health</button>
+            <br>
+            <div class="xyz">
+                <button id="btn1" class="cta-button" onclick="window.location.href='/chatbot'">Medical Assistance</button>
+                <button id="btn2" class="cta-button" onclick="window.location.href='/video-chat'">Doctor Consultation</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+      
+
+        <div class="co">
+            <div class="cont">
+                <h1 id="bcd">Welcome to <span class="highlight">MediSCAN</span></h1>
+                <p id="abc">People have very less time to concentrate on their health because of their busy lifestyles. Consulting the doctor every time we fall ill is a tedious task, people, therefore, tend to search for easily accessible resources available on the Internet because of which they tend to make wrong decisions by taking medicines that may not be suitable for their symptoms. Referring to these resources for remedies based on the given symptoms is not recommended, even a common cold is referred to as something very serious which makes the person also start panicking. With the help of machine learning, we can help to solve this problem by training a model to predict the disease based on given symptoms.</p>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='image3.jpg') }}" alt="Healthcare professional" alt="Healthcare professional">
+            </div>
+        </div>
+
+    </section>
+    
+
+    <section class="welcome-section">
+        <br>
+        <div class="con">
+            <div class="left-content">
+                <h1 class="fade-in">MediSCAN</h1>
+                <h2 class="fade-in">Purpose of the web-app</h2>
+                <p id="para"  class="fade-in">
+                    This project aims to design a web application for the users to identify the
+                    disease they have been infected with based on the symptoms they have
+                    been suffering with a given confidence score. This prevents people from
+                    doing random google search and is intended to provide correct information
+                    to the user. It provides a convenient and accessible tool for individuals to
+                    self-assess their health conditions. This application could be especially
+                    useful for those who live in remote areas without easy access to healthcare
+                    mainly focusing on the students who live in distant places and are unable to
+                    reach any health care professional frequently.
+                </p>
+                <p id="para1" class="fade-in">
+                    These resources for remedies based on the given symptoms is not
+                    recommended, even a common cold is referred to as something very
+                    serious which makes the person also start panicking. With the help of
+                    machine learning, we can help to solve this problem by training a model to
+                    predict the disease based on given symptoms.
+                </p>
+            </div>
+            <div class="right-content"></div>
+        </div>
+    
+    </section>
+    <footer id="about-us">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>University of Engineering & Management,Newtown</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="scroll-top" id="scrollTop">↑</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const highlight = document.querySelector('.highlight');
+            highlight.style.color = '#007bff';
+
+            highlight.addEventListener('mouseover', function() {
+                this.style.color = '#0056b3';
+            });
+
+            highlight.addEventListener('mouseout', function() {
+                this.style.color = '#007bff';
+            });
+        });
+    </script>
+</body>
+</html>
